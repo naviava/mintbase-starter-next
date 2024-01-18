@@ -1,5 +1,6 @@
-import { NearWalletConnector } from "@/components/NearWalletSelector";
+import { NearWalletConnector } from "~/components/near-wallet-selector";
 import type { Metadata } from "next";
+import { Component } from "~/components/component";
 
 export const metadata: Metadata = {
   title: "Mintbase Starter with Next.js",
@@ -9,15 +10,16 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col items-center justify-center mt-2">
-        <div className="mx-6 sm:mx-24 mt-4 mb-4">
-          <div className="w-full flex flex-col justify-center items-center">
-            <div className="w-full flex flex-col justify-center items-center space-y-8">
-              <div className="flex flex-col justify-center items-center space-y-8 text-[40px]">
+      <main className="mt-2 flex flex-col items-center justify-center">
+        <div className="mx-6 mb-4 mt-4 sm:mx-24">
+          <div className="flex w-full flex-col items-center justify-center">
+            <div className="flex w-full flex-col items-center justify-center space-y-8">
+              <div className="flex flex-col items-center justify-center space-y-8 text-[40px]">
                 Mintbase.js Simple Login Example
               </div>
               <NearWalletConnector />
             </div>
+            <Component />
           </div>
         </div>
       </main>
